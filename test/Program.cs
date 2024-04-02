@@ -244,7 +244,7 @@ class Program
         for (int i = 0; i < k; i+)
         {
             if (!MillerRabinTest(n))
-                return true;
+                return false;
         }
 
         return true;
