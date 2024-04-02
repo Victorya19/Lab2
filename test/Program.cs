@@ -289,7 +289,7 @@ class Program
     {
         while (true)
         {
-            int num = rand.Next(min, min);
+            int num = rand.Next(min, max);
             bool isProbablyPrime = CheckMillerRabinPrimality(num);
             if (isProbablyPrime)
             {
