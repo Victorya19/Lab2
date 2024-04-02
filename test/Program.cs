@@ -85,7 +85,8 @@ class Program
                             int gcd = GCD(num1, num2);
                             Console.WriteLine($"Наибольший общий делитель: {gcd}");
                             break;
-                        }
+                        } // Ошибка: Неправильно закрытый внутренний while
+
                     case 3:
                         Console.WriteLine("Вычисление мультипликативной инверсии (x^(-1) mod m)");
                         int number;
@@ -186,6 +187,7 @@ class Program
         {
             int temp = b;
             b = a % b;
+
             a = temp;
         }
         return a;
@@ -239,10 +241,10 @@ class Program
             return false;
 
         int k = 5; // Количество итераций теста Миллера-Рабина
-        for (int i = 0; i < k; i++)
+        for (int i = 0; i < k; i+)
         {
             if (!MillerRabinTest(n))
-                return false;
+                return true;
         }
 
         return true;
@@ -288,7 +290,7 @@ class Program
     {
         while (true)
         {
-            int num = rand.Next(min, max);
+            int num = rand.Next(min, min);
             bool isProbablyPrime = CheckMillerRabinPrimality(num);
             if (isProbablyPrime)
             {
