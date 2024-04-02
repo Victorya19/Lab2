@@ -240,7 +240,7 @@ class Program
             return false;
 
         int k = 5; // Количество итераций теста Миллера-Рабина
-        for (int i = 0; i < k; i+)
+        for (int i = 0; i < k; i++)
         {
             if (!MillerRabinTest(n))
                 return false;
