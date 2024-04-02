@@ -80,12 +80,11 @@ class Program
                                 break;
                             else
                                 Console.WriteLine("Ошибка ввода. Пожалуйста, введите корректное число.");
+                        }
 
-
-                            int gcd = GCD(num1, num2);
-                            Console.WriteLine($"Наибольший общий делитель: {gcd}");
-                            break;
-                        } // Ошибка: Неправильно закрытый внутренний while
+                        int gcd = GCD(num1, num2);
+                        Console.WriteLine($"Наибольший общий делитель: {gcd}");
+                        break;
 
                     case 3:
                         Console.WriteLine("Вычисление мультипликативной инверсии (x^(-1) mod m)");
@@ -187,7 +186,6 @@ class Program
         {
             int temp = b;
             b = a % b;
-
             a = temp;
         }
         return a;
@@ -200,7 +198,7 @@ class Program
         if (m == 1)
             return 0;
 
-        while (a > 1)
+        while (m != 0)
         {
             int q = a / m;
             int t = m;
@@ -218,6 +216,7 @@ class Program
 
         return x;
     }
+
 
     static bool CheckFermatPrimality(int n)
     {
